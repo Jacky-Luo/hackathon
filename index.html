@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日复盘</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Personal Work Review Coach</p>
+          <h1>今日复盘</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="date-chip">2026-06-04 周四</span>
+          <button class="primary-btn" type="button">生成今日复盘</button>
+        </div>
+      </header>
+
+      <section class="intro-panel">
+        <div class="intro-copy">
+          <h2>今天先看两件事</h2>
+          <p>你产出了什么，以及你参与的信息里有哪些需要跟进。</p>
+        </div>
+        <div class="summary-pills" aria-label="今日摘要">
+          <span>文档 Review 2</span>
+          <span>待处理 Highlight 4</span>
+          <span>P0 风险 1</span>
+        </div>
+      </section>
+
+      <section class="review-grid">
+        <article class="review-card active-card" id="outputs">
+          <div class="card-heading">
+            <div>
+              <p class="card-label">我产出的</p>
+              <h3>基于飞书文档的产出 Review</h3>
+            </div>
+            <span class="source-chip">飞书文档</span>
+          </div>
+
+          <div class="work-item">
+            <div class="item-title-row">
+              <h4>多人直播玩法 2026 规划</h4>
+              <span class="type-tag">方案文档</span>
+            </div>
+            <p class="review-line">方向完整，但优先级依据还不够硬。</p>
+
+            <div class="sub-block">
+              <p class="block-title">3 个 Challenge</p>
+              <ol>
+                <li>核心假设是否已经被验证？</li>
+                <li>优先级排序依据是什么？</li>
+                <li>资源减少 30% 时保留什么？</li>
+              </ol>
+            </div>
+
+            <div class="suggestion-box">
+              <strong>优化建议</strong>
+              <span>补充数据依据，增加取舍说明。</span>
+            </div>
+
+            <div class="action-row">
+              <button type="button">打开文档</button>
+              <button class="soft" type="button">生成修改建议</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card" id="participated">
+          <div class="card-heading">
+            <div>
+              <p class="card-label">我参与的</p>
+              <h3>基于会议和聊天的重点提炼</h3>
+            </div>
+            <span class="source-chip">会议 · 聊天</span>
+          </div>
+
+          <div class="work-item">
+            <div class="item-title-row">
+              <h4>Agent 化装修方案评审</h4>
+              <span class="type-tag blue">会议纪要</span>
+            </div>
+            <p class="review-line">Demo 路径已确认，但验收标准还没收口。</p>
+
+            <div class="sub-block">
+              <p class="block-title">3 个 Highlight</p>
+              <ul class="highlights">
+                <li><span class="priority p0">P0</span>今天 18:00 对齐验收 checklist</li>
+                <li><span class="priority p1">P1</span>明天 12:00 确认 Demo 负责人</li>
+                <li><span class="priority p2">P2</span>周五前补充流程图</li>
+              </ul>
+            </div>
+
+            <div class="suggestion-box">
+              <strong>处理建议</strong>
+              <span>先把验收标准落成 checklist，再同步负责人。</span>
+            </div>
+
+            <div class="action-row">
+              <button type="button">创建任务</button>
+              <button class="soft" type="button">加入周报</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="coach-note">
+        <div>
+          <p class="card-label">今日建议</p>
+          <p>先处理 P0 验收标准，再补强 2026 规划文档的优先级依据。</p>
+        </div>
+        <div class="action-row compact">
+          <button type="button">接受建议</button>
+          <button class="soft" type="button">稍后提醒</button>
+        </div>
+      </section>
+
+      <section class="advisor-panel" aria-label="视角建议">
+        <div class="advisor-header">
+          <div>
+            <p class="card-label">建议模块</p>
+            <h3>两种视角看你的工作</h3>
+          </div>
+          <span class="source-chip">Nuwa Skill</span>
+        </div>
+
+        <div class="advisor-grid">
+          <article class="advisor-card jobs-card">
+            <div class="advisor-name-row">
+              <div>
+                <p class="advisor-role">Steve Jobs 视角</p>
+                <h4>先砍掉不重要的东西</h4>
+              </div>
+              <span class="advisor-mark">Focus</span>
+            </div>
+            <p class="advisor-quote">
+              你的 2026 规划现在看起来像在证明“我们什么都能做”。真正的问题是：哪三件事值得你拒绝其他所有事？
+            </p>
+            <ul class="advisor-actions">
+              <li>把玩法组件收敛成 3 个必须赢的体验。</li>
+              <li>每个优先级后面补一句“为什么不做其他项”。</li>
+              <li>Demo 只保留能让用户一眼理解价值的主路径。</li>
+            </ul>
+          </article>
+
+          <article class="advisor-card zhang-card">
+            <div class="advisor-name-row">
+              <div>
+                <p class="advisor-role">张一鸣视角</p>
+                <h4>把表象问题投到底层</h4>
+              </div>
+              <span class="advisor-mark">System</span>
+            </div>
+            <p class="advisor-quote">
+              这里不是“验收标准没写完”的问题，而是信息没有被结构化。先定义输入、判断标准和责任人，后面的讨论会少很多。
+            </p>
+            <ul class="advisor-actions">
+              <li>把验收 checklist 拆成输入、过程、结果三列。</li>
+              <li>用一个 Base 视图承载优先级依据，减少重复同步。</li>
+              <li>给每个 Highlight 补 owner 和截止时间，再进入执行。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
