@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>本周周报</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell report-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Weekly Report</p>
+          <h1>本周周报</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="date-chip">2026-05-29 至 2026-06-04</span>
+          <a class="primary-btn soft-link" href="./index.html">返回复盘</a>
+        </div>
+      </header>
+
+      <section class="report-layout">
+        <article class="report-preview">
+          <div class="card-heading">
+            <div>
+              <p class="card-label">可粘贴到飞书</p>
+              <h3>罗伟珂｜本周工作周报</h3>
+            </div>
+            <button class="primary-btn" id="copyReport" type="button">复制全文</button>
+          </div>
+
+          <pre class="report-text" id="reportText">【本周重点】
+1. Multi-guest 交友玩法 PRD 推进：完成背景、目标、KR、需求细节与 A/B 方案梳理，当前重点是补齐 KR 表中的 status quo、OKR goal 和 expected contribution，并收敛首版必须验证的核心假设。
+2. TNS 连带处罚 case 复盘：完成 95 条 case 的初步打标和结论沉淀。当前样本中合理处罚 62 条，占 65.3%；无法判断 17 条，占 17.9%；异常/误判 16 条，占 16.8%。进一步拆出了主播主动参与、主播无感知、嘉宾侧违规等不同情形。
+3. Q3 内容玩法规划参与：围绕 Boxbattle、Dating 等方向参与讨论，初步判断 Boxbattle 更适合承接营收目标，Dating 更适合先承接供给规模和渗透目标，两类目标需要分开设定。
+4. 多人 CLI 可行性讨论：完成 Demo、配置化、线上化三层边界讨论。Demo 可信度较高，但强互动玩法线上化成本较高，下一步需要先定义实验室 MVP，避免直接承诺生产可复用。
+
+【关键判断】
+1. TNS 连带处罚不是单纯“是否恢复处罚力度”的问题，需要拆成 policy、产品排序、TnS 处罚三条链路分别判断。当前主播主动参与违规约 21%，误判约 16%，还需要补充受影响主播的多人营收占比，才能形成可决策材料。
+2. Multi-guest 交友玩法首版不宜继续扩大范围，应优先回答一个问题：用户是否会因为交友互动产生更高停留或送礼意愿。其他组件描述需要服务于这个验证目标。
+3. 多人 CLI 更适合作为实验室项目先证明“自然语言到直播能力配置”的价值，不应在当前阶段混同为完整线上化方案。
+
+【下周计划】
+1. TNS 连带处罚：补充业务影响数据，明确 policy 回调范围，附 Excel case 给 TnS 复核，并推动形成老板决策材料。
+2. 交友玩法 PRD：补齐 KR 数值口径，明确首版 A/B 只验证一个核心假设，并补充失败条件。
+3. 多人 CLI：收敛一个低耦合 MVP，拆清 Demo、配置化、线上化三层边界，形成可执行的实验室方案。
+4. Q3 玩法规划：将 Boxbattle 和 Dating 的目标分层，分别补充目标数值、owner 和验证路径。
+
+【风险与需要协同】
+1. TNS 结论如果缺少业务影响数据，容易停留在 case 复盘，难以进入 policy 决策。
+2. 交友玩法如果 KR 口径不补齐，后续 A/B 可能只能证明使用率，无法证明业务价值。
+3. 多人 CLI 如果不先定义 MVP，讨论会继续在 Demo 想象和线上工程成本之间来回摆动。</pre>
+
+          <p class="copy-hint" id="copyHint">复制后可直接粘贴进飞书文档。</p>
+        </article>
+
+        <aside class="report-side">
+          <p class="card-label">生成依据</p>
+          <ul class="meeting-list">
+            <li>7 份近期飞书文档</li>
+            <li>40 个日历事件</li>
+            <li>20+ 条会议记录</li>
+            <li>3 场妙记逐字稿</li>
+            <li>20 条 @我消息检索结果</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const copyButton = document.querySelector("#copyReport");
+      const reportText = document.querySelector("#reportText");
+      const copyHint = document.querySelector("#copyHint");
+
+      copyButton?.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(reportText.innerText.trim());
+          copyHint.textContent = "已复制，可以粘贴到飞书。";
+        } catch {
+          copyHint.textContent = "复制失败，请手动选择正文复制。";
+        }
+      });
+    </script>
+  </body>
+</html>

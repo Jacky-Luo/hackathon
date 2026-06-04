@@ -14,20 +14,23 @@
           <h1>今日复盘</h1>
         </div>
         <div class="topbar-actions">
-          <span class="date-chip">2026-06-04 周四</span>
-          <button class="primary-btn" type="button">生成今日复盘</button>
+          <span class="date-chip">2026-05-29 至 2026-06-04 · 已接入妙记</span>
+          <a class="primary-btn" href="./weekly-report.html">生成本周周报</a>
         </div>
       </header>
 
       <section class="intro-panel">
         <div class="intro-copy">
           <h2>今天先看两件事</h2>
-          <p>你产出了什么，以及你参与的信息里有哪些需要跟进。</p>
+          <p>基于过去一周真实飞书数据：文档、日历、会议、妙记逐字稿、任务与聊天提及。</p>
         </div>
         <div class="summary-pills" aria-label="今日摘要">
-          <span>文档 Review 2</span>
-          <span>待处理 Highlight 4</span>
-          <span>P0 风险 1</span>
+          <span>文档 7</span>
+          <span>日历事件 40</span>
+          <span>会议记录 20+</span>
+          <span>妙记逐字稿 3</span>
+          <span>@我消息 20</span>
+          <span>任务 1</span>
         </div>
       </section>
 
@@ -43,28 +46,58 @@
 
           <div class="work-item">
             <div class="item-title-row">
-              <h4>多人直播玩法 2026 规划</h4>
+              <h4>[PRD] Multi-guest 交友玩法</h4>
               <span class="type-tag">方案文档</span>
             </div>
-            <p class="review-line">方向完整，但优先级依据还不够硬。</p>
+            <p class="review-line">文档结构完整，已覆盖背景、目标、KR、需求细节与 A/B；但核心指标表仍缺少现状、目标和预期贡献数值。</p>
 
             <div class="sub-block">
               <p class="block-title">3 个 Challenge</p>
               <ol>
-                <li>核心假设是否已经被验证？</li>
-                <li>优先级排序依据是什么？</li>
-                <li>资源减少 30% 时保留什么？</li>
+                <li>交友玩法渗透率 0.3% 的目标，是从供给规模、主播意愿还是看播转化倒推出来的？</li>
+                <li>主播 UV / 看播时长 / 送礼金额三类指标，谁是北极星，谁只是过程指标？</li>
+                <li>首发 US + Latam 的 A/B 范围是否能验证送礼动机，还是只能验证基础使用率？</li>
               </ol>
             </div>
 
             <div class="suggestion-box">
               <strong>优化建议</strong>
-              <span>补充数据依据，增加取舍说明。</span>
+              <span>先补齐 KR 表的 status quo、OKR goal 和 expected contribution，再收敛首版必须验证的 1 个假设。</span>
             </div>
 
             <div class="action-row">
-              <button type="button">打开文档</button>
-              <button class="soft" type="button">生成修改建议</button>
+              <a class="primary-btn" href="https://bytedance.larkoffice.com/wiki/FLtdwObc6ifWalkR4IqcCORLnLe" target="_blank" rel="noreferrer">打开文档</a>
+              <button class="soft" type="button" data-action="show-suggestion" data-target="prd-suggestion">生成修改建议</button>
+            </div>
+            <div class="inline-result" id="prd-suggestion" hidden>
+              <p class="block-title">可直接补进文档的修改建议</p>
+              <ol>
+                <li>在 KR 表中补齐 status quo、OKR goal、expected contribution 三列，避免只描述方向。</li>
+                <li>把首版验证目标收敛为“交友互动是否提升停留或送礼意愿”，其他功能放入后续版本。</li>
+                <li>在 A/B 方案中补充失败条件：哪些数据出现时说明该方向不值得继续加码。</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="work-item stacked-item">
+            <div class="item-title-row">
+              <h4>TNS 连带处罚 case 打标总结</h4>
+              <span class="type-tag">复盘文档</span>
+            </div>
+            <p class="review-line">结论密度高：已打标样本中合理 62 条，占 65.3%；无法判断 17 条，占 17.9%；异常/误判 16 条，占 16.8%。</p>
+
+            <div class="sub-block">
+              <p class="block-title">3 个 Challenge</p>
+              <ol>
+                <li>主播主动参与违规仅 21.1%，是否足以支撑“恢复主播侧 policy 惩罚力度”？</li>
+                <li>误判集中在 Adult Nudity / Sexual Activity，是否需要先区分治理策略和模型识别问题？</li>
+                <li>嘉宾侧处罚 + 多人内部降权如何量化收益，避免变成只增加管控成本？</li>
+              </ol>
+            </div>
+
+            <div class="suggestion-box">
+              <strong>优化建议</strong>
+              <span>把建议动作拆成 policy、产品排序、TnS 处罚三条链路，并补充各自 owner 与验证指标。</span>
             </div>
           </div>
         </article>
@@ -80,29 +113,49 @@
 
           <div class="work-item">
             <div class="item-title-row">
-              <h4>Agent 化装修方案评审</h4>
-              <span class="type-tag blue">会议纪要</span>
+              <h4>过去一周重点参与事项</h4>
+              <span class="type-tag blue">会议记录</span>
             </div>
-            <p class="review-line">Demo 路径已确认，但验收标准还没收口。</p>
+            <p class="review-line">已接入 3 场妙记逐字稿：TNS 连带处罚、多人 CLI 可行性、Q3 内容玩法规划。核心问题集中在治理策略能否进入决策、CLI 是否收敛成最小 MVP、Q3 玩法指标是否拆清。</p>
 
             <div class="sub-block">
               <p class="block-title">3 个 Highlight</p>
               <ul class="highlights">
-                <li><span class="priority p0">P0</span>今天 18:00 对齐验收 checklist</li>
-                <li><span class="priority p1">P1</span>明天 12:00 确认 Demo 负责人</li>
-                <li><span class="priority p2">P2</span>周五前补充流程图</li>
+                <li><span class="priority p0">P0</span>6/5 前：补 TNS 业务影响数据，发 Excel 给 TnS 复核，并明确诉求边界</li>
+                <li><span class="priority p1">P1</span>6/5 前：把多人 CLI 收敛成实验室 MVP，拆清 Demo、配置化、线上化三层边界</li>
+                <li><span class="priority p2">P2</span>本周内：Q3 目标分层，Boxbattle 背营收，Dating 背规模和渗透</li>
               </ul>
             </div>
 
             <div class="suggestion-box">
               <strong>处理建议</strong>
-              <span>先把验收标准落成 checklist，再同步负责人。</span>
+              <span>先把 TNS 文档补成可决策材料，再把 CLI 从愿景改成最小 MVP；Q3 玩法目标不要混在一起，Boxbattle 看营收，Dating 看规模。</span>
             </div>
 
             <div class="action-row">
-              <button type="button">创建任务</button>
-              <button class="soft" type="button">加入周报</button>
+              <button type="button" data-action="create-task">创建任务</button>
             </div>
+            <div class="inline-result" id="task-result" hidden>
+              <p class="block-title">已生成待办</p>
+              <ul>
+                <li>6/5 前补齐 TNS 业务影响数据，并发送 Excel 给 TnS 复核。</li>
+                <li>6/5 前收敛多人 CLI 实验室 MVP 边界。</li>
+                <li>本周内拆清 Boxbattle / Dating 的目标和 owner。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="work-item stacked-item">
+            <div class="item-title-row">
+              <h4>妙记与聊天补充</h4>
+              <span class="type-tag blue">已接入</span>
+            </div>
+            <ul class="meeting-list">
+              <li><strong>对齐多人Top营收现状：</strong>主播主动参与违规约 21%，误判约 16%；需要补受影响主播的营收占比，再让 TnS 复核 case。</li>
+              <li><strong>多人cli：</strong>Demo 可信度高，但强互动玩法线上化成本高；先选一个低耦合 MVP，不直接承诺生产可复用。</li>
+              <li><strong>共商Q3内容大计：</strong>Boxbattle 更像营收项目，Dating 更像供给和渗透项目，两者需要分开设目标。</li>
+            </ul>
+            <p class="coverage-note">妙记逐字稿已接入 3 场；聊天侧已检索到过去一周 20 条 @我消息，正文详情仍需补充 group / p2p 消息读取权限。</p>
           </div>
         </article>
       </section>
@@ -110,11 +163,11 @@
       <section class="coach-note">
         <div>
           <p class="card-label">今日建议</p>
-          <p>先处理 P0 验收标准，再补强 2026 规划文档的优先级依据。</p>
+          <p>先更新 TNS 文档：补业务影响、明确 policy 回调范围、附 Excel case；再推进 CLI MVP 边界和 Q3 指标分层。</p>
         </div>
         <div class="action-row compact">
-          <button type="button">接受建议</button>
-          <button class="soft" type="button">稍后提醒</button>
+          <button type="button" data-action="accept-advice">接受建议</button>
+          <button class="soft" type="button" data-action="remind-later">稍后提醒</button>
         </div>
       </section>
 
@@ -122,7 +175,7 @@
         <div class="advisor-header">
           <div>
             <p class="card-label">建议模块</p>
-            <h3>两种视角看你的工作</h3>
+            <h3>三种视角看你的工作</h3>
           </div>
           <span class="source-chip">Nuwa Skill</span>
         </div>
@@ -137,12 +190,12 @@
               <span class="advisor-mark">Focus</span>
             </div>
             <p class="advisor-quote">
-              你的 2026 规划现在看起来像在证明“我们什么都能做”。真正的问题是：哪三件事值得你拒绝其他所有事？
+              你的 Multi-guest 交友 PRD 还在证明“这个方向重要”。现在该做减法：首版到底只验证哪一个体验？
             </p>
             <ul class="advisor-actions">
-              <li>把玩法组件收敛成 3 个必须赢的体验。</li>
-              <li>每个优先级后面补一句“为什么不做其他项”。</li>
-              <li>Demo 只保留能让用户一眼理解价值的主路径。</li>
+              <li>把首版目标收敛成一个最关键的交友场景。</li>
+              <li>删掉无法支撑 KR 的组件描述。</li>
+              <li>让 A/B 实验只回答一个问题：用户是否愿意为交友互动停留或送礼。</li>
             </ul>
           </article>
 
@@ -155,17 +208,55 @@
               <span class="advisor-mark">System</span>
             </div>
             <p class="advisor-quote">
-              这里不是“验收标准没写完”的问题，而是信息没有被结构化。先定义输入、判断标准和责任人，后面的讨论会少很多。
+              这不是“case 总结不够完整”的问题，而是治理决策还没有形成数据飞轮。先把处罚、降权、误判复盘拆成可追踪字段。
             </p>
             <ul class="advisor-actions">
-              <li>把验收 checklist 拆成输入、过程、结果三列。</li>
-              <li>用一个 Base 视图承载优先级依据，减少重复同步。</li>
-              <li>给每个 Highlight 补 owner 和截止时间，再进入执行。</li>
+              <li>用 Base 视图沉淀 policy、action、责任方和复盘结论。</li>
+              <li>把 16.8% 异常/误判单独建一条模型改进链路。</li>
+              <li>所有建议动作都补 owner、截止时间和验证指标。</li>
+            </ul>
+          </article>
+
+          <article class="advisor-card wang-card">
+            <div class="advisor-name-row">
+              <div>
+                <p class="advisor-role">王金鑫视角</p>
+                <h4>先证明这不是局部增长幻觉</h4>
+              </div>
+              <span class="advisor-mark">Endgame</span>
+            </div>
+            <p class="advisor-quote">
+              现在最大的问题不是文档没写完，而是两个动作都还没说明业务路径：交友玩法带来的是短期热闹，还是可复制的多人增长机制？
+            </p>
+            <ul class="advisor-actions">
+              <li>给交友玩法补一页“失败条件”：什么数据说明这个方向不值得继续加码。</li>
+              <li>把 TNS 处罚建议从“主张”改成“机制”：policy、排序、TnS 三条链路分别怎么复利。</li>
+              <li>周报只写 Why / So What / Next Step：少写会议进度，多写本周改变了什么判断。</li>
+            </ul>
+          </article>
+
+          <article class="advisor-card wjx2-card">
+            <div class="advisor-name-row">
+              <div>
+                <p class="advisor-role">WJX 2.0 视角</p>
+                <h4>先过三道门，再谈怎么做</h4>
+              </div>
+              <span class="advisor-mark">Gate</span>
+            </div>
+            <p class="advisor-quote">
+              你现在不是缺产出，而是缺“能不能经得起追问”的产出。PRD、TNS 复盘、CLI 讨论，都先别急着包装成结论，先回答：真问题是什么，证据够不够，失败时会看到什么。
+            </p>
+            <ul class="advisor-actions">
+              <li><strong>真问题门：</strong>交友玩法到底是在做 AA 增长机制，还是一次 AB 台阶？如果只是短期热闹，别把它写成长期引擎。</li>
+              <li><strong>证据门：</strong>TNS 结论里哪些是 data-driven，哪些是 judgement-driven？不要用 21% 和 16% 这两个数掩盖还没判断清楚的 policy 边界。</li>
+              <li><strong>失败门：</strong>CLI MVP 如果 6 周后失败，最可能的原因是什么？线上化成本、原子能力缺失、还是 PM demo 无法复用？先把失败条件写进方案。</li>
             </ul>
           </article>
         </div>
       </section>
     </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <script src="./script.js"></script>
   </body>
