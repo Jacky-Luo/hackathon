@@ -171,86 +171,91 @@
         </div>
       </section>
 
-      <section class="advisor-panel" aria-label="视角建议">
+      <section class="advisor-panel" aria-label="七人对话建议">
         <div class="advisor-header">
           <div>
-            <p class="card-label">建议模块</p>
-            <h3>三种视角看你的工作</h3>
+            <p class="card-label">对话式建议</p>
+            <h3>七个人在群里给你 Review</h3>
           </div>
-          <span class="source-chip">Nuwa Skill</span>
+          <span class="source-chip">7 voices</span>
         </div>
 
-        <div class="advisor-grid">
-          <article class="advisor-card jobs-card">
-            <div class="advisor-name-row">
-              <div>
-                <p class="advisor-role">Steve Jobs 视角</p>
-                <h4>先砍掉不重要的东西</h4>
+        <div class="advisor-chat" role="list" aria-label="七人对话列表">
+          <article class="chat-message jobs-message" role="listitem">
+            <div class="avatar" aria-hidden="true">SJ</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>Steve Jobs</strong>
+                <span>Focus</span>
               </div>
-              <span class="advisor-mark">Focus</span>
+              <p>你的 Multi-guest 交友 PRD 还在证明“这个方向重要”。现在该做减法：首版到底只验证哪一个体验？删掉不能服务这个体验的东西。</p>
             </div>
-            <p class="advisor-quote">
-              你的 Multi-guest 交友 PRD 还在证明“这个方向重要”。现在该做减法：首版到底只验证哪一个体验？
-            </p>
-            <ul class="advisor-actions">
-              <li>把首版目标收敛成一个最关键的交友场景。</li>
-              <li>删掉无法支撑 KR 的组件描述。</li>
-              <li>让 A/B 实验只回答一个问题：用户是否愿意为交友互动停留或送礼。</li>
-            </ul>
           </article>
 
-          <article class="advisor-card zhang-card">
-            <div class="advisor-name-row">
-              <div>
-                <p class="advisor-role">张一鸣视角</p>
-                <h4>把表象问题投到底层</h4>
+          <article class="chat-message zhang-message" role="listitem">
+            <div class="avatar" aria-hidden="true">ZM</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>张一鸣</strong>
+                <span>System</span>
               </div>
-              <span class="advisor-mark">System</span>
+              <p>这不是“case 总结不够完整”的问题，而是治理决策还没有形成数据飞轮。先把处罚、降权、误判复盘拆成可追踪字段。</p>
             </div>
-            <p class="advisor-quote">
-              这不是“case 总结不够完整”的问题，而是治理决策还没有形成数据飞轮。先把处罚、降权、误判复盘拆成可追踪字段。
-            </p>
-            <ul class="advisor-actions">
-              <li>用 Base 视图沉淀 policy、action、责任方和复盘结论。</li>
-              <li>把 16.8% 异常/误判单独建一条模型改进链路。</li>
-              <li>所有建议动作都补 owner、截止时间和验证指标。</li>
-            </ul>
           </article>
 
-          <article class="advisor-card wang-card">
-            <div class="advisor-name-row">
-              <div>
-                <p class="advisor-role">王金鑫视角</p>
-                <h4>先证明这不是局部增长幻觉</h4>
+          <article class="chat-message wang-message" role="listitem">
+            <div class="avatar" aria-hidden="true">WJ</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>王金鑫</strong>
+                <span>Endgame</span>
               </div>
-              <span class="advisor-mark">Endgame</span>
+              <p>现在最大的问题不是文档没写完，而是两个动作都还没说明业务路径：交友玩法带来的是短期热闹，还是可复制的多人增长机制？</p>
             </div>
-            <p class="advisor-quote">
-              现在最大的问题不是文档没写完，而是两个动作都还没说明业务路径：交友玩法带来的是短期热闹，还是可复制的多人增长机制？
-            </p>
-            <ul class="advisor-actions">
-              <li>给交友玩法补一页“失败条件”：什么数据说明这个方向不值得继续加码。</li>
-              <li>把 TNS 处罚建议从“主张”改成“机制”：policy、排序、TnS 三条链路分别怎么复利。</li>
-              <li>周报只写 Why / So What / Next Step：少写会议进度，多写本周改变了什么判断。</li>
-            </ul>
           </article>
 
-          <article class="advisor-card wjx2-card">
-            <div class="advisor-name-row">
-              <div>
-                <p class="advisor-role">WJX 2.0 视角</p>
-                <h4>先过三道门，再谈怎么做</h4>
+          <article class="chat-message wjx2-message" role="listitem">
+            <div class="avatar" aria-hidden="true">2.0</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>WJX 2.0</strong>
+                <span>Gate</span>
               </div>
-              <span class="advisor-mark">Gate</span>
+              <p>先过三道门：真问题是什么，证据够不够，失败时会看到什么。PRD、TNS 复盘、CLI 讨论，都别急着包装成结论。</p>
             </div>
-            <p class="advisor-quote">
-              你现在不是缺产出，而是缺“能不能经得起追问”的产出。PRD、TNS 复盘、CLI 讨论，都先别急着包装成结论，先回答：真问题是什么，证据够不够，失败时会看到什么。
-            </p>
-            <ul class="advisor-actions">
-              <li><strong>真问题门：</strong>交友玩法到底是在做 AA 增长机制，还是一次 AB 台阶？如果只是短期热闹，别把它写成长期引擎。</li>
-              <li><strong>证据门：</strong>TNS 结论里哪些是 data-driven，哪些是 judgement-driven？不要用 21% 和 16% 这两个数掩盖还没判断清楚的 policy 边界。</li>
-              <li><strong>失败门：</strong>CLI MVP 如果 6 周后失败，最可能的原因是什么？线上化成本、原子能力缺失、还是 PM demo 无法复用？先把失败条件写进方案。</li>
-            </ul>
+          </article>
+
+          <article class="chat-message cai-message" role="listitem">
+            <div class="avatar" aria-hidden="true">CJ</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>蔡骏</strong>
+                <span>Social</span>
+              </div>
+              <p>多人直播不是一个 feature，而是可能长成实时社交社区的独立业务。先判断它是否扩大连麦用户、提升 LT、沉淀关系心智。</p>
+            </div>
+          </article>
+
+          <article class="chat-message trump-message" role="listitem">
+            <div class="avatar" aria-hidden="true">DT</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>特朗普</strong>
+                <span>Deal</span>
+              </div>
+              <p>你有很多材料，但缺一个强势叙事：这周到底赢了什么、要向谁要资源、对方为什么现在必须配合。不要只汇报进展。</p>
+            </div>
+          </article>
+
+          <article class="chat-message naval-message" role="listitem">
+            <div class="avatar" aria-hidden="true">NR</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>Naval</strong>
+                <span>Leverage</span>
+              </div>
+              <p>不要只完成任务。任务会归零，资产会复利。把这周的会议结论沉淀成可复用的判断框架、指标口径和自动化流程。</p>
+            </div>
           </article>
         </div>
       </section>

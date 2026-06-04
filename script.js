@@ -41,6 +41,8 @@ document.querySelectorAll("[data-action]").forEach((button) => {
 
     if (action === "remind-later") {
       showToast("已设置稍后提醒：今天 18:00 回来看 TNS 文档进展。");
+      return;
     }
+
   });
 });
